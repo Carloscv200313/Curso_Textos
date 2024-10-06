@@ -1,38 +1,30 @@
 "use client"
-import Image from 'next/image'
-import { useState } from "react"
+import { useState} from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 
+
 const navItems = [
   { name: "Inicio", href: "/" },
-
   { name: "Alumnos", href: "/alumnos" },
 ]
-
 export function NavbarDinamico() {
   const [isOpen, setIsOpen] = useState(false)
-
   return (
-    <nav className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <nav className={`absolute w-full z-10 transition-colors duration-300  bg-transparent  text-white`}>
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0">
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="text-xl font-bold"
-              >
+            {/* <Link href="/" className="flex-shrink-0">
                 <Image
-                  src="/img/titulo.02.png"
-                  width={100}
-                  height={50}
-                  alt="Picture of the author"
-                />
-              </motion.div>
-            </Link>
+                width={200}
+                height={200}
+                src="/img/titulo.02.png"
+                alt=""
+                className="w-40 h-20 object-cover"
+              />
+            </Link>*/}
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
@@ -40,7 +32,7 @@ export function NavbarDinamico() {
                 <motion.div key={item.name} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                   <Link
                     href={item.href}
-                    className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300"
+                    className="px-3 py-2 rounded-md text-xl font-medium transition duration-300"
                   >
                     {item.name}
                   </Link>
@@ -66,7 +58,7 @@ export function NavbarDinamico() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="md:hidden"
+          className="md:hidden w-full"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
@@ -77,7 +69,7 @@ export function NavbarDinamico() {
               >
                 <Link
                   href={item.href}
-                  className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 transition duration-300"
+                  className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-900 transition duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
