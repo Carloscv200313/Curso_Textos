@@ -8,77 +8,14 @@ const alumnos = [
   {
     id: "Carlos-Calderon",
     nombre: "Carlos Calderon",
-    foto: "/img/imagen-00.jpg",
+    foto: "/alumnos/carlos_calderon/foto.jpeg",
     descripcionBreve: "Estudiante de Ingeniería de Sistemas",
     redes: {
-      facebook: "https://facebook.com/anagarcia",
-      twitter: "https://twitter.com/anagarcia",
-      linkedin: "https://linkedin.com/in/anagarcia",
-      instagram: "https://instagram.com/anagarcia",
-      gitHub:""
+      facebook: "https://www.facebook.com/profile.php?id=100070618440202",
+      linkedin: "https://www.linkedin.com/in/carlos-sebastian-calderon-vega-0a2586285/",
+      instagram: "https://www.instagram.com/cscv200313/",
+      gitHub:"https://github.com/Carloscv200313"
       
-    },
-  },
-  {
-    id: 2,
-    nombre: "Carlos Rodríguez",
-    foto: "/img/imagen-01.jpg",
-    descripcionBreve: "Especialista en Inteligencia Artificial",
-    redes: {
-      facebook: "https://facebook.com/carlosrodriguez",
-      twitter: "https://twitter.com/carlosrodriguez",
-      linkedin: "https://linkedin.com/in/carlosrodriguez",
-      instagram: "https://instagram.com/carlosrodriguez",
-    },
-  },
-  {
-    id: 3,
-    nombre: "Laura Martínez",
-    foto: "/img/imagen-02.jpg",
-    descripcionBreve: "Desarrolladora Full Stack",
-    redes: {
-      facebook: "https://facebook.com/lauramartinez",
-      twitter: "https://twitter.com/lauramartinez",
-      linkedin: "https://linkedin.com/in/lauramartinez",
-      instagram: "https://instagram.com/lauramartinez",
-    },
-  },
-  {
-    id: "Carlos-Calderon",
-    nombre: "Carlos Calderon",
-    foto: "/img/imagen-03.jpg",
-    descripcionBreve: "Estudiante de Ingeniería de Sistemas",
-    redes: {
-      facebook: "https://facebook.com/anagarcia",
-      twitter: "https://twitter.com/anagarcia",
-      linkedin: "https://linkedin.com/in/anagarcia",
-      instagram: "https://instagram.com/anagarcia",
-      gitHub:""
-      
-    },
-  },
-  {
-    id: 2,
-    nombre: "Carlos Rodríguez",
-    foto: "/img/imagen-04.jpg",
-    descripcionBreve: "Especialista en Inteligencia Artificial",
-    redes: {
-      facebook: "https://facebook.com/carlosrodriguez",
-      twitter: "https://twitter.com/carlosrodriguez",
-      linkedin: "https://linkedin.com/in/carlosrodriguez",
-      instagram: "https://instagram.com/carlosrodriguez",
-    },
-  },
-  {
-    id: 3,
-    nombre: "Laura Martínez",
-    foto: "/img/imagen-05.jpg",
-    descripcionBreve: "Desarrolladora Full Stack",
-    redes: {
-      facebook: "https://facebook.com/lauramartinez",
-      twitter: "https://twitter.com/lauramartinez",
-      linkedin: "https://linkedin.com/in/lauramartinez",
-      instagram: "https://instagram.com/lauramartinez",
     },
   },
 
@@ -114,7 +51,7 @@ export default function TarjetasAlumnosComponent() {
       ))}
 
       <motion.h1
-        className="text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 m-20 text-center relative z-10"
+        className="m-10 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 xl:m-20 text-center relative z-10 xl:text-8xl"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -131,10 +68,10 @@ export default function TarjetasAlumnosComponent() {
             className="p-0 m-0 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden shadow-lg cursor-pointer transform perspective-1000"
             
           >
-            <div className="relative" onClick={() => router.push(`/alumnos/${alumno.id}`)}>
+            <div className="relative w-full h-auto " onClick={() => router.push(`/alumnos/${alumno.id}`)}>
               <Image
-                width={100000}
-                height={50000}
+                width={10000}
+                height={500}
                 src={alumno.foto}
                 alt={alumno.nombre}
                 className="w-full h-64 object-cover"
