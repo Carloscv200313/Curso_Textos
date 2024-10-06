@@ -1,5 +1,5 @@
 "use client"
-
+import Image from 'next/image'
 import { useState } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
@@ -7,10 +7,8 @@ import { Menu, X } from "lucide-react"
 
 const navItems = [
   { name: "Inicio", href: "/" },
-  { name: "Proyectos", href: "/proyectos" },
+
   { name: "Alumnos", href: "/alumnos" },
-  { name: "Quienes Somos", href: "/quienes-somos" },
-  { name: "Contacto", href: "/contacto" },
 ]
 
 export function NavbarDinamico() {
@@ -27,7 +25,12 @@ export function NavbarDinamico() {
                 whileTap={{ scale: 0.9 }}
                 className="text-xl font-bold"
               >
-                MiLogo
+                <Image
+                  src="/img/titulo.02.png"
+                  width={100}
+                  height={50}
+                  alt="Picture of the author"
+                />
               </motion.div>
             </Link>
           </div>

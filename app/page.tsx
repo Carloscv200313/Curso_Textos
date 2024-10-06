@@ -1,9 +1,11 @@
+'use client'
+
+import { CarruselDinamicoComponent } from "@/components/carrusel-dinamico";
+
 export default function Home() {
   return (
-    <div >
-      <>
-      <h1>holaaaaaaaaa</h1>
-      </>
+    <div className="p-0 m-0">
+      <CarruselDinamicoComponent />
     </div>
   );
 }
