@@ -1,5 +1,4 @@
 "use client"
-
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Twitter, Mail } from 'lucide-react'
 import { useState } from 'react'
@@ -9,33 +8,33 @@ const alumno = {
     nombre: "Carlos Calderon",
     foto: "/alumnos/carlos_calderon/foto.jpeg",
     titulo: "Ingeniera de Software Full Stack",
-    descripcion: "Ana es una apasionada desarrolladora con experiencia en tecnologías web modernas. Su enfoque se centra en crear soluciones innovadoras y escalables. Con una sólida formación en ingeniería de software y un ojo agudo para el diseño, Ana se esfuerza por construir aplicaciones que no solo funcionen perfectamente, sino que también ofrezcan una experiencia de usuario excepcional.",
+    descripcion: "Carlos es una apasionado desarrollador con experiencia en tecnologías web modernas. Su enfoque se centra en crear soluciones innovadoras y escalables. Con una sólida formación en ingeniería de software y un ojo agudo para el diseño, Carlos se esfuerza por construir aplicaciones que no solo funcionen perfectamente, sino que también ofrezcan una experiencia de usuario excepcional.",
     contacto: {
-        email: "ana.garcia@email.com",
-        linkedin: "https://linkedin.com/in/anagarcia",
-        twitter: "https://twitter.com/anagarcia",
-        github: "https://github.com/anagarcia"
+        email: "https://www.facebook.com/profile.php?id=100070618440202",
+        linkedin: "https://www.linkedin.com/in/carlos-sebastian-calderon-vega-0a2586285/",
+        twitter: "https://www.instagram.com/cscv200313/",
+        github: "https://github.com/Carloscv200313"
     },
     proyectos: [
         {
             id: 1,
             nombre: "EcoTrack",
             descripcion: "Una aplicación móvil para rastrear y reducir la huella de carbono personal.",
-            imagen: "",
+            imagen: "/img/imagen-00.jpg",
             github: "https://github.com/anagarcia/ecotrack"
         },
         {
             id: 2,
             nombre: "MindfulAI",
             descripcion: "Un chatbot de terapia cognitivo-conductual impulsado por IA para apoyo de salud mental.",
-            imagen: "",
+            imagen: "/img/imagen-01.jpg",
             github: "https://github.com/anagarcia/mindfulai"
         },
         {
             id: 3,
             nombre: "CodeCollab",
             descripcion: "Plataforma de colaboración en tiempo real para desarrolladores con características de pair programming.",
-            imagen: "",
+            imagen: "/img/imagen-02.jpg",
             github: "https://github.com/anagarcia/codecollab"
         }
     ]
@@ -72,7 +71,7 @@ export default function Home() {
                 ))}
             </div>
 
-            <div className="container mx-auto relative z-10">
+            <div className="container mt-12 mx-auto relative z-0">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
