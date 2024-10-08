@@ -18,7 +18,19 @@ const alumnos = [
       
     },
   },
-
+  {
+    id: "Carlos-Calderon",
+    nombre: "Carlos Calderon",
+    foto: "/alumnos/carlos_calderon/foto.jpeg",
+    descripcionBreve: "Estudiante de Ingeniería de Sistemas",
+    redes: {
+      facebook: "https://www.facebook.com/profile.php?id=100070618440202",
+      linkedin: "https://www.linkedin.com/in/carlos-sebastian-calderon-vega-0a2586285/",
+      instagram: "https://www.instagram.com/cscv200313/",
+      gitHub:"https://github.com/Carloscv200313"
+      
+    },
+  },
 ]
 
 export default function TarjetasAlumnosComponent() {

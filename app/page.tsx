@@ -1,5 +1,3 @@
-'use client'
-
 import { CarruselDinamicoComponent } from "@/components/carrusel-dinamico";
 
 export default function Home() {
