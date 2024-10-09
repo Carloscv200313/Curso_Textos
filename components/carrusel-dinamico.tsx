@@ -70,7 +70,7 @@ export function CarruselDinamicoComponent() {
 
   return (
     <div className="relative w-full h-[100vh] mx-auto overflow-hidden">
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 ">
         <AnimatePresence initial={false} custom={currentIndex}>
           <motion.div
             key={currentIndex}

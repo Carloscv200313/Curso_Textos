@@ -1,18 +1,19 @@
-"use client"
-import { useState} from "react"
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
-
+"use client";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
   { name: "Inicio", href: "/" },
   { name: "Alumnos", href: "/alumnos" },
-]
+];
+
 export function NavbarDinamico() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className={`absolute w-full z-10 transition-colors duration-300  bg-transparent  text-white`}>
+    <nav className={`absolute w-full z-10 transition-colors duration-300 bg-transparent text-white`}>
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
@@ -58,18 +59,23 @@ export function NavbarDinamico() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="md:hidden w-full"
+          className="md:hidden fixed inset-0 z-50 bg-black "
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="flex justify-end p-4">
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setIsOpen(false)}
+              className="text-white"
+            >
+              <X className="h-6 w-6" />
+            </motion.button>
+          </div>
+          <div className="flex flex-col items-center justify-center h-full">
             {navItems.map((item) => (
-              <motion.div
-                key={item.name}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <motion.div key={item.name} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href={item.href}
-                  className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-900 transition duration-300"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-900 transition duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -80,5 +86,5 @@ export function NavbarDinamico() {
         </motion.div>
       )}
     </nav>
-  )
+  );
 }
