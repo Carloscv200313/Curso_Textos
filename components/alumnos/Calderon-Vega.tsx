@@ -8,7 +8,7 @@ import { Imagen } from './foto'
 
 const alumno = {
     nombre: "Carlos Calderon",
-    foto: "/alumnos/carlos_calderon/foto.jpeg",
+    foto: "/alumnos/carlos_calderon/foto.png",
     titulo: "Ingeniera de Software Full Stack",
     descripcion: "Carlos es una apasionado desarrollador con experiencia en tecnologías web modernas. Su enfoque se centra en crear soluciones innovadoras y escalables. Con una sólida formación en ingeniería de software y un ojo agudo para el diseño, Carlos se esfuerza por construir aplicaciones que no solo funcionen perfectamente, sino que también ofrezcan una experiencia de usuario excepcional.",
     contacto: {
