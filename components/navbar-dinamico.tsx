@@ -13,7 +13,7 @@ export function NavbarDinamico() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className={`absolute w-full z-10 transition-colors duration-300 bg-transparent text-white`}>
+    <nav className={`absolute w-full z-50 transition-colors duration-300 bg-transparent text-white`}>
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
