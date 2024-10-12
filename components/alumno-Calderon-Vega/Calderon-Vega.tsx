@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { TypewriterEffectDemo } from "./titulo";
 import { motion } from "framer-motion"; // Importa useInView de Framer Motion
+import { InfiniteMovingCardsDemo } from "../infinito";
 
 export default function PaginaCarlosCalderon() {
     return (
@@ -107,6 +108,7 @@ export default function PaginaCarlosCalderon() {
                         </div>
                     ))}
                 </div>
+                <InfiniteMovingCardsDemo/>
             </div>
         </>
     );
