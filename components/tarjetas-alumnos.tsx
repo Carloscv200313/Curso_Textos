@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
-import { Facebook,Linkedin, Instagram,Github } from 'lucide-react'
+import { Facebook, Linkedin, Instagram, Github } from 'lucide-react'
 import Image from 'next/image';
 const alumnos = [
   {
@@ -14,8 +14,8 @@ const alumnos = [
       facebook: "https://www.facebook.com/profile.php?id=100070618440202",
       linkedin: "https://www.linkedin.com/in/carlos-sebastian-calderon-vega-0a2586285/",
       instagram: "https://www.instagram.com/cscv200313/",
-      gitHub:"https://github.com/Carloscv200313"
-      
+      gitHub: "https://github.com/Carloscv200313"
+
     },
   },
   {
@@ -27,8 +27,8 @@ const alumnos = [
       facebook: "https://www.facebook.com/profile.php?id=100070618440202",
       linkedin: "https://www.linkedin.com/in/carlos-sebastian-calderon-vega-0a2586285/",
       instagram: "https://www.instagram.com/cscv200313/",
-      gitHub:"https://github.com/Carloscv200313"
-      
+      gitHub: "https://github.com/Carloscv200313"
+
     },
   },
 ]
@@ -63,7 +63,7 @@ export default function TarjetasAlumnosComponent() {
       ))}
 
       <motion.h1
-        className="m-10 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 xl:m-20 text-center relative -z-0 xl:text-8xl"
+        className="m-10 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-pink-800 xl:m-8 text-center relative -z-0 xl:text-8xl"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -77,8 +77,8 @@ export default function TarjetasAlumnosComponent() {
             key={alumno.id}
             whileHover={{ scale: 1.05, rotateY: 5 }}
             whileTap={{ scale: 0.95 }}
-            className="p-0 m-0 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden shadow-lg cursor-pointer transform perspective-1000"
-            
+            className="p-0 m-0 bg-gradient-to-br from-gray-900 to-gray-950 rounded-xl overflow-hidden shadow-lg cursor-pointer transform perspective-1000"
+
           >
             <div className="relative w-full h-auto " onClick={() => router.push(`/alumnos/${alumno.id}`)}>
               <Image
@@ -86,7 +86,7 @@ export default function TarjetasAlumnosComponent() {
                 height={500}
                 src={alumno.foto}
                 alt={alumno.nombre}
-                className="w-full h-64 object-cover"
+                className="w-full h-80 object-cover"
               />
               <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <p className="text-white text-lg font-semibold">Ver perfil</p>
