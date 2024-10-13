@@ -1,6 +1,4 @@
 import type { Config } from "tailwindcss";
-
-// Función para agregar variables de colores personalizados
 // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 function addVariablesForColors({ addBase, theme }: { addBase: Function, theme: Function }) {
   const allColors = theme("colors");
