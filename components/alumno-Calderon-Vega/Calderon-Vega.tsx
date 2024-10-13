@@ -72,7 +72,7 @@ export default function PaginaCarlosCalderon() {
             </div>
 
             <div className="bg-gray-950 text-gray-300 p-8 w-full min-h-[50vh] flex  justify-center  flex-col md:flex-col">
-                <InfiniteMovingCardsDemo/>
+                <InfiniteMovingCardsDemo />
                 <p className="text-3xl md:text-4xl font-extrabold text-gray-300 xl:m-8 xl:text-5xl pb-5">
                     <span className="border-b-2 border-yellow-800">Skills</span>
                 </p>
@@ -109,9 +109,9 @@ export default function PaginaCarlosCalderon() {
                         </div>
                     ))}
                 </div>
-                    
+
             </div>
-            
+
         </>
     );
 }
