@@ -1,118 +1,115 @@
-"use client"
-
-import { motion } from 'framer-motion'
-import { useRouter } from 'next/navigation'
-import { Facebook, Linkedin, Instagram, Github } from 'lucide-react'
+"use client";
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-const alumnos = [
-  {
-    id: "Carlos-Calderon",
-    nombre: "Carlos Calderon",
-    foto: "/alumnos/carlos_calderon/foto.png",
-    descripcionBreve: "Estudiante de Ingeniería de Sistemas",
-    redes: {
-      facebook: "https://www.facebook.com/profile.php?id=100070618440202",
-      linkedin: "https://www.linkedin.com/in/carlos-sebastian-calderon-vega-0a2586285/",
-      instagram: "https://www.instagram.com/cscv200313/",
-      gitHub: "https://github.com/Carloscv200313"
 
+interface Student {
+  name: string;
+  description: string;
+  image: string;
+}
+
+const students: Student[] = [
+  { name: "Carlos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png" },
+  { name: "Valeria Soto", description: "Experta en diseño UX/UI.", image: "/alumnos/carlos_calderon/foto.png" },
+  { name: "Jorge Ramírez", description: "Desarrollador backend con Java.", image: "/alumnos/carlos_calderon/foto.png" },
+  { name: "Caos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png" },
+  { name: "Leria Soto", description: "Experta en diseño UX/UI.", image: "/alumnos/carlos_calderon/foto.png" },
+  { name: "Rge Ramírez", description: "Desarrollador backend con Java.", image: "/alumnos/carlos_calderon/foto.png" },
+  { name: "Carlos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png" },
+  { name: "Valeria Soto", description: "Experta en diseño UX/UI.", image: "/alumnos/carlos_calderon/foto.png" },
+  { name: "Jorge Ramírez", description: "Desarrollador backend con Java.", image: "/alumnos/carlos_calderon/foto.png" },
+];
+
+const container = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delayChildren: i * 0.3,
+      staggerChildren: 0.3,
+    },
+  }),
+};
+
+const item = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8, // Animación lenta
     },
   },
-  {
-    id: "Carlos-Calderon",
-    nombre: "Carlos Calderon",
-    foto: "/alumnos/carlos_calderon/foto.png",
-    descripcionBreve: "Estudiante de Ingeniería de Sistemas",
-    redes: {
-      facebook: "https://www.facebook.com/profile.php?id=100070618440202",
-      linkedin: "https://www.linkedin.com/in/carlos-sebastian-calderon-vega-0a2586285/",
-      instagram: "https://www.instagram.com/cscv200313/",
-      gitHub: "https://github.com/Carloscv200313"
-
-    },
-  },
-]
+};
 
 export default function TarjetasAlumnosComponent() {
-  const router = useRouter()
+  const router = useRouter();
+  const handleNavigation = (path: string) => {
+    router.push(path); // Redirige a la ruta especificada
+  };
 
   return (
-    <div className="min-h-screen bg-gray-950 p-8 relative overflow-hidden ">
-      {/* Destellos blancos */}
-      {[...Array(50)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute bg-white rounded-full"
+    <div>
+      {/* Fondo con destellos blancos */}
+      <div
+        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        aria-hidden="true"
+      >
+        <div
+          className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#030303] to-[#2517f5] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
           style={{
-            width: Math.random() * 3 + 1,
-            height: Math.random() * 3 + 1,
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`,
-          }}
-          animate={{
-            opacity: [0, 1, 0],
-            scale: [0, 1, 0],
-          }}
-          transition={{
-            duration: Math.random() * 2 + 1,
-            repeat: Infinity,
-            repeatType: "loop",
-            ease: "easeInOut",
+            clipPath:
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
           }}
         />
-      ))}
+      </div>
 
-      <motion.h1
-        className="m-10 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-pink-800 xl:m-8 text-center relative -z-0 xl:text-8xl"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        Lista de Alumnos
-      </motion.h1>
+      <div className="flex flex-col items-center justify-center min-h-screen pt-24">
+        {/* Título con animación */}
+        <motion.h1
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5 }} // Animación lenta
+          className="text-4xl font-bold text-center mb-10 text-white"
+        >
+          NUESTROS ALUMNOS
+        </motion.h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 relative ">
-        {alumnos.map((alumno) => (
-          <motion.div
-            key={alumno.id}
-            whileHover={{ scale: 1.05, rotateY: 5 }}
-            whileTap={{ scale: 0.95 }}
-            className="p-0 m-0 bg-gradient-to-br from-gray-900 to-gray-950 rounded-xl overflow-hidden shadow-lg cursor-pointer transform perspective-1000"
-
-          >
-            <div className="relative w-full h-auto " onClick={() => router.push(`/alumnos/${alumno.id}`)}>
+        {/* Contenedor de la lista de alumnos */}
+        <motion.div
+          className="w-full flex flex-wrap justify-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }} // Activa la animación cuando esté el 20% visible
+          variants={container}
+        >
+          {students.map((student, index) => (
+            <motion.div
+              key={student.name}
+              className="w-full sm:w-1/2 lg:w-1/3 p-4 flex flex-col items-center justify-center mb-8 bg-transparent rounded-lg shadow-lg cursor-pointer"
+              custom={index}
+              variants={item}
+              onClick={() => handleNavigation('/alumnos/Carlos-Calderon')}
+            >
+              {/* Imagen del alumno */}
               <Image
-                width={10000}
-                height={500}
-                src={alumno.foto}
-                alt={alumno.nombre}
-                className="w-full h-80 object-cover"
+                src={student.image}
+                width="1000"
+                height="1000"
+                alt={student.name}
+                className="w-auto h-48 rounded-full mb-5 object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-lg font-semibold">Ver perfil</p>
+              {/* Nombre y descripción */}
+              <div className="text-center">
+                <h2 className="text-2xl font-bold text-white">{student.name}</h2>
+                <p className="text-gray-400">{student.description}</p>
               </div>
-            </div>
-            <div className="p-6">
-              <h2 className="text-2xl font-bold text-white mb-2">{alumno.nombre}</h2>
-              <p className="text-gray-300 mb-4">{alumno.descripcionBreve}</p>
-              <div className="flex justify-center space-x-4">
-                <a href={alumno.redes.facebook} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors duration-200">
-                  <Facebook size={24} />
-                </a>
-                <a href={alumno.redes.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors duration-200">
-                  <Linkedin size={24} />
-                </a>
-                <a href={alumno.redes.instagram} target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:text-pink-300 transition-colors duration-200">
-                  <Instagram size={24} />
-                </a>
-                <a href={alumno.redes.gitHub} target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:text-pink-300 transition-colors duration-200">
-                  < Github size={24} />
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </div>
-  )
+  );
 }

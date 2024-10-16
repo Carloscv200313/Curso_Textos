@@ -17,15 +17,7 @@ export function NavbarDinamico() {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
-            {/* <Link href="/" className="flex-shrink-0">
-                <Image
-                width={200}
-                height={200}
-                src="/img/titulo.02.png"
-                alt=""
-                className="w-40 h-20 object-cover"
-              />
-            </Link>*/}
+
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">

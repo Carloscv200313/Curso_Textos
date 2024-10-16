@@ -1,14 +1,28 @@
-import { CarruselDinamicoComponent } from "@/components/carrusel-dinamico";
+import { TypewriterEffectDemo } from "@/components/titulo_principal";
 
 export default function Home() {
   return (
-    <div className="p-0 m-0">
-      <div className="w-full h-full">
-      <CarruselDinamicoComponent />
+    <div className="min-h-[100vh] flex items-center justify-center" >
+      <div
+        className=" absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        aria-hidden="true"
+      >
+        <div
+          className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#030303] to-[#2517f5] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+          style={{
+            clipPath:
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+          }}
+        />
       </div>
-      {/* <div className="w-full h-screen">
-        hola
-      </div>*/ }
+      <div className="w-3/4  flex flex-col h-screen items-center justify-center">
+        <div className="w-5/6 h-1/2">
+          <TypewriterEffectDemo />
+        </div>
+        
+      </div>
+
+
     </div>
   );
 }
