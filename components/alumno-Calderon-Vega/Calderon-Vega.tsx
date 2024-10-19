@@ -1,10 +1,30 @@
 "use client";
 import Image from "next/image";
-import { TypewriterEffectDemo } from "./titulo";
 import { motion } from "framer-motion"; // Importa useInView de Framer Motion
 import { InfiniteMovingCardsDemo } from "../infinito";
-
+import { TypewriterEffect } from "../ui/typewriter-effect";
 export default function PaginaCarlosCalderon() {
+    const words = [
+        {
+            text: "Ingeniero",
+        },
+        {
+            text: "de",
+            
+        },
+        {
+            text: "Sistemas",
+            
+        },
+        {
+            text: "Developer",
+            className: "text-blue-500 dark:text-indigo-500",
+        },
+        {
+            text: "Web",
+            className: "text-blue-500 dark:text-indigo-500",
+        },
+    ];
     return (
         <>
             <div className="h-screen bg-black relative overflow-hidden">
@@ -20,7 +40,9 @@ export default function PaginaCarlosCalderon() {
                 {/* Texto en la parte superior */}
                 <div className="absolute inset-0 flex items-center justify-center text-white z-10 w-full">
                     <div className="w-2/3">
-                        <TypewriterEffectDemo />
+                    <div className="flex flex-col items-start justify-start h-[15rem] md:h-[8rem]">
+                            <TypewriterEffect words={words} />
+                        </div>
                     </div>
                 </div>
             </div>

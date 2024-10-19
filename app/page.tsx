@@ -1,6 +1,43 @@
-import { TypewriterEffectDemo } from "@/components/titulo_principal";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 
 export default function Home() {
+  const words = [
+    {
+      text: "Un",
+      className: "text-blue-500",
+    },
+    {
+      text: "legado",
+
+    },
+    {
+      text: "de",
+      className: "text-blue-500",
+    },
+    {
+      text: "conocimiento",
+
+    },
+    {
+      text: "para",
+      className: "text-blue-500",
+    },
+    {
+      text: "las",
+      className: "text-blue-500",
+    },
+    {
+      text: "mentes",
+
+    },
+    {
+      text: "del",
+      className: "text-blue-500",
+    },
+    {
+      text: "mañana",
+    },
+  ];
   return (
     <div className="min-h-[100vh] flex items-center justify-center" >
       <div
@@ -15,14 +52,10 @@ export default function Home() {
           }}
         />
       </div>
-      <div className="w-3/4  flex flex-col h-screen items-center justify-center">
-        <div className="w-5/6 h-1/2">
-          <TypewriterEffectDemo />
-        </div>
-        
-      </div>
-
-
+      <section className="w-5/6 flex flex-col min-h-screen items-center justify-start pt-28">        
+          <TypewriterEffect words={words} className="pb-6" />
+          <h1 className="text-gray-600 text-[21px] w-8/12 text-center flex items-center justify-center">Explora los proyectos y logros que nuestros estudiantes han dejado como legado para las futuras generaciones.</h1>
+      </section>
     </div>
   );
 }

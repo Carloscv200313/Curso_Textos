@@ -82,16 +82,16 @@ export default function TarjetasAlumnosComponent() {
           className="w-full flex flex-wrap justify-center"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }} // Activa la animación cuando esté el 20% visible
+          viewport={{ once: true }} // Activa la animación cuando esté el 20% visible
           variants={container}
         >
           {students.map((student, index) => (
             <motion.div
               key={student.name}
-              className="w-full sm:w-1/2 lg:w-1/3 p-4 flex flex-col items-center justify-center mb-8 bg-transparent rounded-lg shadow-lg cursor-pointer"
+              className="w-full sm:w-1/2 lg:w-1/3 p-4 flex flex-col items-center justify-center mb-8 bg-transparent rounded-lg shadow-lg "
               custom={index}
               variants={item}
-              onClick={() => handleNavigation('/alumnos/Carlos-Calderon')}
+              
             >
               {/* Imagen del alumno */}
               <Image
@@ -99,7 +99,8 @@ export default function TarjetasAlumnosComponent() {
                 width="1000"
                 height="1000"
                 alt={student.name}
-                className="w-auto h-48 rounded-full mb-5 object-cover"
+                onClick={() => handleNavigation('/alumnos/Carlos-Calderon')}
+                className="w-auto h-48 rounded-full mb-5 object-cover  cursor-pointer"
               />
               {/* Nombre y descripción */}
               <div className="text-center">

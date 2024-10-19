@@ -8,7 +8,6 @@ export const InfiniteMovingCards = ({
     items,
     direction = "left",
     speed = "fast",
-    pauseOnHover = true,
     className,
 }: {
     items: {
@@ -88,7 +87,6 @@ export const InfiniteMovingCards = ({
                 className={cn(
                     "flex min-w-full shrink-0 gap-2 py-0 w-max flex-nowrap",
                     start && "animate-scroll",
-                    pauseOnHover && "hover:[animation-play-state:paused]"
                 )}
             >
                 {items.map((item) => (

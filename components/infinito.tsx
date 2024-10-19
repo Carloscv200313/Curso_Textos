@@ -14,7 +14,6 @@ export function InfiniteMovingCardsDemo() {
         </div>
     );
 }
-
 const testimonials = [
     {
         url: "/svgs/angular.svg",
