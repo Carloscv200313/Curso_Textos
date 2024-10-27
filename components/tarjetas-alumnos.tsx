@@ -87,7 +87,7 @@ export default function TarjetasAlumnosComponent() {
         >
           {students.map((student, index) => (
             <motion.div
-              key={student.name}
+              key={index}
               className="w-full sm:w-1/2 lg:w-1/3 p-4 flex flex-col items-center justify-center mb-8 bg-transparent rounded-lg shadow-lg "
               custom={index}
               variants={item}
