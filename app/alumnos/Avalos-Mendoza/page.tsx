@@ -1,4 +1,4 @@
-import { PortfolioLain } from "@/components/portfolio-vaporwave";
+import  PortfolioLain  from "@/components/portfolio-vaporwave";
 
 export default function Home() {
     return (
