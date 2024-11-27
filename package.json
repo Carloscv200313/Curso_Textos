@@ -17,10 +17,16 @@
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.17",
     "lucide-react": "^0.447.0",
+<<<<<<< HEAD
     "next": "14.2.14",
     "react": "^18",
     "react-dom": "^18",
     "react-intersection-observer": "^9.13.1",
+=======
+    "next": "^15.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+>>>>>>> 35ff80e85112ce4df4ed418923400c268e878bc6
     "simplex-noise": "^4.0.3",
     "styled-components": "^6.1.13",
     "tailwind-merge": "^2.5.4",
