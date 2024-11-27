@@ -11,9 +11,9 @@ interface Student {
 
 const students: Student[] = [
   { name: "Carlos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Valeria Soto", description: "Experta en diseño UX/UI.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Jorge Ramírez", description: "Desarrollador backend con Java.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Caos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png" },
+  { name: "Piero Correa", description: "Experta en diseño UX/UI.", image: "/alumnos/carlos_calderon/foto.png" },
+  { name: "David Carbajal", description: "Desarrollador backend con Java.", image: "/alumnos/carlos_calderon/foto.png" },
+  { name: "Jair Valerio", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png" },
   { name: "Leria Soto", description: "Experta en diseño UX/UI.", image: "/alumnos/carlos_calderon/foto.png" },
   { name: "Rge Ramírez", description: "Desarrollador backend con Java.", image: "/alumnos/carlos_calderon/foto.png" },
   { name: "Carlos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png" },
