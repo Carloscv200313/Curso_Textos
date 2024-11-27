@@ -3,7 +3,6 @@ import Image from "next/image";
 import { motion } from "framer-motion"; // Importa useInView de Framer Motion
 import { InfiniteMovingCardsDemo } from "@/components/infinito";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
-import { text } from "stream/consumers";
 export default function Home() {
     const words = [
         {text: "De",},
@@ -83,7 +82,7 @@ export default function Home() {
                         transition={{ duration: 0.5 }}
                         className="mb-4 text-gray-300 text-base md:text-lg lg:text-xl"
                     >
-                        Hola muy buenas, soy Miguel Angel Calderon Guevara,soy estudiante de Ingeniería de Sistemas en el cuarto ciclo de la UNTELS "Universidad prestigiosa de Lima xd",soy alguien muy apasionado a la hora de poder crear cosas interesantes y nuevas que me enseña mi carrera,sea sobre páginas webs,bases de datos, nuevos algoritmos, entre otros entornos de ello. Me motiva crear soluciones nuevas que mejoren la experiencia del usuario, y al mismo tiempo aprender y aplicar nuevas tecnologías en mis proyectos. Tengo una emocion grande por seguir en este campo, y poder emprender las oportunidades que se presenten para seguir creciendo en este campo.
+                        Hola muy buenas, soy Miguel Angel Calderon Guevara,soy estudiante de Ingeniería de Sistemas en el cuarto ciclo de la UNTELS Universidad prestigiosa de Lima xd ,soy alguien muy apasionado a la hora de poder crear cosas interesantes y nuevas que me enseña mi carrera,sea sobre páginas webs,bases de datos, nuevos algoritmos, entre otros entornos de ello. Me motiva crear soluciones nuevas que mejoren la experiencia del usuario, y al mismo tiempo aprender y aplicar nuevas tecnologías en mis proyectos. Tengo una emocion grande por seguir en este campo, y poder emprender las oportunidades que se presenten para seguir creciendo en este campo.
                     </motion.p>
                     {/* Aseguramos que los botones están fuera de los párrafos */}
                     <motion.div
