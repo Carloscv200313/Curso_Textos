@@ -23,7 +23,7 @@ export default function Portfolio() {
                             Jhon Vergara
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-300 max-w-2xl">
-                            Bica dibujo, "grande Ochoa"
+                            Bica dibujo, grande Ochoa
                         </p>
                     </div>
                 </div>
