@@ -7,19 +7,22 @@ interface Student {
   name: string;
   description: string;
   image: string;
+  slug?: string; // Opcional
 }
 
+
 const students: Student[] = [
-  { name: "Carlos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Valeria Soto", description: "Experta en diseño UX/UI.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Jorge Ramírez", description: "Desarrollador backend con Java.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Caos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Leria Soto", description: "Experta en diseño UX/UI.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Rge Ramírez", description: "Desarrollador backend con Java.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Carlos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Valeria Soto", description: "Experta en diseño UX/UI.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Jorge Ramírez", description: "Desarrollador backend con Java.", image: "/alumnos/carlos_calderon/foto.png" },
+  { name: "Carlos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png", slug: "Carlos-Calderon" },
+  { name: "Carbajal Solano", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png", slug: "Carbajal-Solano" },
+  { name: "Jorge Ramírez", description: "Desarrollador backend con Java.", image: "/alumnos/carlos_calderon/foto.png", slug: "jorge-ramirez" },
+  { name: "Caos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png", slug: "caos-calderon" },
+  { name: "Leria Soto", description: "Experta en diseño UX/UI.", image: "/alumnos/carlos_calderon/foto.png", slug: "leria-soto" },
+  { name: "Rge Ramírez", description: "Desarrollador backend con Java.", image: "/alumnos/carlos_calderon/foto.png", slug: "rge-ramirez" },
+  { name: "Carlos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png", slug: "carlos-calderon-2" },
+  { name: "Valeria Soto", description: "Experta en diseño UX/UI.", image: "/alumnos/carlos_calderon/foto.png", slug: "valeria-soto" },
+  { name: "Jorge Ramírez", description: "Desarrollador backend con Java.", image: "/alumnos/carlos_calderon/foto.png", slug: "jorge-ramirez-2" },
 ];
+
 
 const container = {
   hidden: { opacity: 0, y: 50 },
@@ -99,7 +102,7 @@ export default function TarjetasAlumnosComponent() {
                 width="1000"
                 height="1000"
                 alt={student.name}
-                onClick={() => handleNavigation('/alumnos/Carlos-Calderon')}
+                onClick={() => handleNavigation(`/alumnos/${student.slug}`)}
                 className="w-auto h-48 rounded-full mb-5 object-cover  cursor-pointer"
               />
               {/* Nombre y descripción */}
