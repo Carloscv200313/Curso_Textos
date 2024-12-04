@@ -396,7 +396,7 @@ export function GlobeDemo() {
 
     return (
         <div className="py-0 h-screen m-0 md:h-auto dark:bg-black bg-black relative w-full">
-            <div className="flex flex-col md:flex-row max-w-7xl mx-auto relative overflow-hidden md:h-[40rem] px-4">
+            <div className="flex flex-col md:flex-row mx-auto relative overflow-hidden md:h-[40rem] px-4">
                 <motion.div
                     initial={{
                         opacity: 0,
@@ -409,15 +409,18 @@ export function GlobeDemo() {
                     transition={{
                         duration: 1,
                     }}
-                    className="flex-1 flex items-center justify-center mb-10 md:mb-0"
+                    className="flex-1 flex flex-col justify-center items-center m-0 gap-10"
                 >
-                    <h1 className="text-blue-100 text-4xl md:text-7xl font-serif w-full text-center">
+                    <h1 className="text-blue-100 text-4xl md:text-6xl font-serif w-full text-center">
                         Un legado de conocimiento para las mentes del mañana
                     </h1>
+                    <p className="text-neutral-500 text-xs md:text-2xl font-sans w-full text-center">
+                        Donde las ideas de ayer inspiran los logros de mañana
+                    </p>
                 </motion.div>
                 <div className="flex-1 relative">
                     <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-black z-40" />
-                    <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
+                    <div className="absolute w-full  h-72 md:h-full z-10">
                         <World data={sampleArcs} globeConfig={globeConfig} />
                     </div>
                 </div>

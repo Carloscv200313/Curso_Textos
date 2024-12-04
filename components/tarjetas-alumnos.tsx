@@ -7,18 +7,12 @@ interface Student {
   name: string;
   description: string;
   image: string;
+  ruta: string;
 }
 
 const students: Student[] = [
-  { name: "Carlos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Valeria Soto", description: "Experta en diseño UX/UI.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Jorge Ramírez", description: "Desarrollador backend con Java.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Caos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Leria Soto", description: "Experta en diseño UX/UI.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Rge Ramírez", description: "Desarrollador backend con Java.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Carlos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Valeria Soto", description: "Experta en diseño UX/UI.", image: "/alumnos/carlos_calderon/foto.png" },
-  { name: "Jorge Ramírez", description: "Desarrollador backend con Java.", image: "/alumnos/carlos_calderon/foto.png" },
+  { name: "Carlos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png", ruta:"/alumnos/Carlos-Calderon" },
+  { name: "Oscar Nuñez", description: "Ciencia de Datos", image: "/alumnos/Oscar/perfil.jpeg" , ruta:"/alumnos/Oscar"},
 ];
 
 const container = {
@@ -99,7 +93,7 @@ export default function TarjetasAlumnosComponent() {
                 width="1000"
                 height="1000"
                 alt={student.name}
-                onClick={() => handleNavigation('/alumnos/Carlos-Calderon')}
+                onClick={() => handleNavigation(student.ruta)}
                 className="w-auto h-48 rounded-full mb-5 object-cover  cursor-pointer"
               />
               {/* Nombre y descripción */}
