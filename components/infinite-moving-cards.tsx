@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 
 export const InfiniteMovingCards = ({
@@ -20,7 +20,7 @@ export const InfiniteMovingCards = ({
   pauseOnHover?: boolean;
   className?: string;
 }) => {
-  const containerRef = useState<HTMLDivElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const [start, setStart] = useState(false);
 
   useEffect(() => {
@@ -34,6 +34,7 @@ export const InfiniteMovingCards = ({
   return (
     <div
       ref={containerRef}
+
       className={`scroller relative z-20  max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] ${className}`}
     >
       <motion.div
