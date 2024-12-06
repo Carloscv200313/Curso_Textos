@@ -20,7 +20,7 @@ export function ProjectSection() {
   return (
     <section id="projects" className="py-20 relative">
       <div className="space-y-12">
-        <h2 className="text-4xl font-bold text-center mb-8">MIS PROYECTOS</h2>
+        <h2 className="text-4xl font-bold text-center mb-8 text-gray-800">MIS PROYECTOS</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projectImages.map((project, index) => (
             <div key={index} className="space-y-4">
@@ -32,24 +32,20 @@ export function ProjectSection() {
                   className="object-cover rounded-lg shadow-md"
                 />
               </div>
-              <p className="text-center text-gray-500">{project.description}</p>
+              <p className="text-center text-gray-600">{project.description}</p>
             </div>
           ))}
         </div>
         <div className="max-w-2xl mx-auto text-center space-y-6 mt-12">
-          <p className="text-gray-400 text-justify">
-          Estos son algunos de los proyectos que he desarrollado hasta el momento a lo largo de mi carrera universitaria. 
-          Cada uno de ellos refleja mi crecimiento profesional y mi pasión por la tecnología. 
-          A lo largo de mi formación, he aprendido valiosas lecciones que me han permitido enfrentar desafíos complejos y encontrar soluciones creativas. 
-          Estoy emocionado por seguir ampliando mi experiencia y espero poder emprender más proyectos
-          que me permitan seguir aprendiendo y contribuir al desarrollo de soluciones innovadoras
+          <p className="text-gray-600 text-justify">
+            Estos son algunos de los proyectos que he desarrollado hasta el momento a lo largo de mi carrera
+            universitaria. Cada uno de ellos refleja mi crecimiento profesional y mi pasión por la tecnología. A lo
+            largo de mi formación, he aprendido valiosas lecciones que me han permitido enfrentar desafíos complejos y
+            encontrar soluciones creativas. Estoy emocionado por seguir ampliando mi experiencia y espero poder
+            emprender más proyectos que me permitan seguir aprendiendo y contribuir al desarrollo de soluciones
+            innovadoras.
           </p>
-          <Button
-            variant="outline"
-            className="uppercase text-sm tracking-wider border-gray-600 hover:border-white"
-          >
-            Ver proyectos
-          </Button>
+
         </div>
       </div>
     </section>
