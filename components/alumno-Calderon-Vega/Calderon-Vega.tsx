@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion"; // Importa useInView de Framer Motion
 import { InfiniteMovingCardsDemo } from "../infinito";
 import { TypewriterEffect } from "../ui/typewriter-effect";
+import { ProjectGridComponent } from "../project-grid";
 export default function PaginaCarlosCalderon() {
     const words = [
         {
@@ -10,11 +11,11 @@ export default function PaginaCarlosCalderon() {
         },
         {
             text: "de",
-            
+
         },
         {
             text: "Sistemas",
-            
+
         },
         {
             text: "Developer",
@@ -40,7 +41,7 @@ export default function PaginaCarlosCalderon() {
                 {/* Texto en la parte superior */}
                 <div className="absolute inset-0 flex items-center justify-center text-white z-10 w-full">
                     <div className="w-2/3">
-                    <div className="flex flex-col items-start justify-start h-[15rem] md:h-[8rem]">
+                        <div className="flex flex-col items-start justify-start h-[15rem] md:h-[8rem]">
                             <TypewriterEffect words={words} />
                         </div>
                     </div>
@@ -52,14 +53,13 @@ export default function PaginaCarlosCalderon() {
                         initial={{ opacity: 0, x: -100 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-3xl md:text-4xl font-extrabold text-gray-300 xl:m-8 xl:text-5xl pb-5"
                     >
                         <Image
-                            width={500}
+                            width={3000}
                             height={1000}
                             src="/alumnos/carlos_calderon/foto.png"
                             alt="foto de fondo"
-                            className="rounded-3xl shadow-lg shadow-slate-950 h-5/6 w-4/6" // Clases para bordes redondos y sombra
+                            className="rounded-3xl shadow-lg shadow-slate-950 h-full w-full" // Clases para bordes redondos y sombra
                         />
                     </motion.p>
                 </div>
@@ -92,7 +92,6 @@ export default function PaginaCarlosCalderon() {
                     </motion.div>
                 </div>
             </div>
-
             <div className="bg-gray-950 text-gray-300 p-8 w-full min-h-[50vh] flex  justify-center  flex-col md:flex-col">
                 <InfiniteMovingCardsDemo />
                 <p className="text-3xl md:text-4xl font-extrabold text-gray-300 xl:m-8 xl:text-5xl pb-5">
@@ -131,9 +130,11 @@ export default function PaginaCarlosCalderon() {
                         </div>
                     ))}
                 </div>
-
+                <div className="min-h-screen bg-transparent">
+                    <ProjectGridComponent/>
+                    
+                </div>
             </div>
-
         </>
     );
 }

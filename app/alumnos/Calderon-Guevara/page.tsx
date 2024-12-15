@@ -22,17 +22,17 @@ export default function Home() {
         {
             title: "Sistema de Gestión de Biblioteca",
             description: "Aplicación web desarrollada con React y Node.js para administrar préstamos y devoluciones de libros.",
-            image: "/alumnos/Miguel_Calderon/bibliteca.jpg",
+            image: "/alumnos/Miguel_Calderon/proyecto1.jpg",
         },
         {
             title: "App de Monitoreo de Redes",
             description: "Herramienta de monitoreo de redes creada con Python y Django, utilizando visualizaciones en tiempo real.",
-            image: "/alumnos/Miguel_Calderon/redes.jpg",
+            image: "/alumnos/Miguel_Calderon/proyecto2.jpg",
         },
         {
             title: "Algoritmo de Optimización de Rutas",
             description: "Implementación de un algoritmo genético para optimizar rutas de entrega, desarrollado en Java.",
-            image: "/alumnos/Miguel_Calderon/rutas.jpg",
+            image: "/alumnos/Miguel_Calderon/proyecto3.jpg",
         },
     ];
 
@@ -90,6 +90,15 @@ export default function Home() {
                     >
                         Soy Miguel Angel Calderon Guevara, estudiante de Ingeniería de Sistemas en el cuarto ciclo de la UNTELS. Mi pasión es crear soluciones innovadoras utilizando tecnologías como React, Node.js y Python. Me especializo en desarrollo web, bases de datos y algoritmos de optimización. Busco constantemente aprender nuevas tecnologías y aplicarlas en proyectos que mejoren la experiencia del usuario y resuelvan problemas complejos.
                     </motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="grid gap-4 md:gap-20 grid-cols-1 md:grid-cols-2 mt-6"
+                    >
+                        <button className="rounded-3xl bg-blue-500 text-white px-4 py-2 hover:bg-blue-400 transition duration-300">Contáctame</button>
+                        <button className="rounded-3xl bg-gray-700 text-white px-4 py-2 hover:bg-gray-600 transition duration-300">Ver CV</button>
+                    </motion.div>
                 </div>
             </div>
 
