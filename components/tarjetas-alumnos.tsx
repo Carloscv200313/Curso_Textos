@@ -13,7 +13,7 @@ interface Student {
 
 const students: Student[] = [
   { name: "Carlos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png", slug: "Carlos-Calderon" },
-  { name: "Carbajal Solano", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png", slug: "Carbajal-Solano" },
+  { name: "David Carbajal", description: "Especialista en Arquitectura de Ciberseguridad y Sistemas Digitales.", image: "/alumnos/CARBAJAL/foto-CARBAJAL.png", slug: "Carbajal-Solano" },
   { name: "Jorge Ramírez", description: "Desarrollador backend con Java.", image: "/alumnos/carlos_calderon/foto.png", slug: "jorge-ramirez" },
   { name: "Caos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png", slug: "caos-calderon" },
   { name: "Leria Soto", description: "Experta en diseño UX/UI.", image: "/alumnos/carlos_calderon/foto.png", slug: "leria-soto" },

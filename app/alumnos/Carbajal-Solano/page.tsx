@@ -8,6 +8,7 @@ import TechBackground from '@/components/TechBackground'
 import AboutMeCard from '@/components/AboutMeCard'
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa'
 import { SiMongodb, SiMysql, SiExpress, SiTypescript, SiTailwindcss } from 'react-icons/si'
+import styles from '@/components/ImageFrame.module.css'
 
 const SkillBar = ({ skill, percentage }: { skill: string; percentage: number }) => (
   <div className="mb-4">
@@ -45,11 +46,11 @@ export default function Page() {
       <section className="h-screen relative overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=1080&width=1920"
-            alt="Fondo abstracto tecnológico"
+            src="/alumnos/CARBAJAL/HACKER.jpg"
+            alt="Fondo de matriz digital"
             layout="fill"
             objectFit="cover"
-            className="opacity-20"
+            className={`opacity-20 ${styles.imageFrame} ${styles.squareFrame}`}
             priority
           />
         </div>
@@ -61,6 +62,15 @@ export default function Page() {
 
       {/* About Me Section */}
       <section className="w-full min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 p-8 flex flex-col md:flex-row items-center justify-center relative">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/alumnos/CARBAJAL/133C.gif"
+            alt="Matrix digital rain background"
+            layout="fill"
+            objectFit="cover"
+            className={`opacity-10 ${styles.imageFrame} ${styles.squareFrame}`}
+          />
+        </div>
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -68,11 +78,11 @@ export default function Page() {
           className="w-full md:w-1/2 flex items-center justify-center mb-8 md:mb-0"
         >
           <Image
-            src="/placeholder.svg?height=400&width=400"
-            alt="Foto de perfil de David Carbajal Solano"
+            src="/alumnos/CARBAJAL/Anonymous-Logo.jpg"
+            alt="Logo de Anonymous"
             width={400}
             height={400}
-            className="rounded-full shadow-lg shadow-blue-500/50"
+            className={`${styles.imageFrame} ${styles.roundedFrame} shadow-lg shadow-blue-500/50`}
           />
         </motion.div>
         <div className="w-full md:w-1/2 flex justify-center">
@@ -82,6 +92,15 @@ export default function Page() {
 
       {/* Skills Section */}
       <section className="bg-gray-800 bg-opacity-80 p-8 w-full min-h-screen flex flex-col justify-center relative">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/alumnos/CARBAJAL/133C.gif"
+            alt="Matrix digital rain background"
+            layout="fill"
+            objectFit="cover"
+            className={`opacity-10 ${styles.imageFrame} ${styles.squareFrame}`}
+          />
+        </div>
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -100,7 +119,7 @@ export default function Page() {
           <SkillBar skill="MongoDB" percentage={75} />
           <SkillBar skill="Git" percentage={90} />
           <SkillBar skill="Hacking Ético" percentage={85} />
-          <SkillBar skill="Seguridad Web" percentage={80} />
+          <SkillBar skill="Criptografía" percentage={80} />
         </div>
         <motion.div 
           initial={{ opacity: 0, y: 50 }}

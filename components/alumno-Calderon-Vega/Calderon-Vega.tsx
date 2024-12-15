@@ -32,7 +32,7 @@ export default function PaginaCarlosCalderon() {
                 <Image
                     width={10000}
                     height={500}
-                    src="/alumnos/carlos_calderon/fondo.jpg"
+                    src="/alumnos/CARBAJAL/fondo.jpg"
                     alt="foto de fondo"
                     className="absolute inset-0 object-cover w-full h-full"
                     style={{ filter: "brightness(0.1)" }} // Oscurece la imagen
@@ -57,7 +57,7 @@ export default function PaginaCarlosCalderon() {
                         <Image
                             width={500}
                             height={1000}
-                            src="/alumnos/carlos_calderon/foto.png"
+                            src="/alumnos/CARBAJAL/foto.png"
                             alt="foto de fondo"
                             className="rounded-3xl shadow-lg shadow-slate-950 h-5/6 w-4/6" // Clases para bordes redondos y sombra
                         />
