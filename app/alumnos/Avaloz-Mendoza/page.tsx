@@ -120,8 +120,7 @@ export default function Component() {
           <GlitchText text="JESHUA RAÚL AVALOS MENDOZA" />
           <p className="max-w-2xl text-xl text-green-300 mb-8">
             <GlowingText>
-              Soy un Ingeniero de sistemas de la Universidad Nacional Tecnológica de Lima Sur. Actualmente resido en Lima, distrito de Chorrilos junto con mi familia.
-              Soy un apasionado del internet, no por que tenga algún vicio, si no que me encanta ver que hay tantas comunidades que se forman dentro de ella, como si fuera otra forma de vida ajena al cuerpo físico. Algunos otros temas que me interesan son la historia, la antropología, psicologia, el desarrollo de videojuegos y me encantaría poder abordar temas de ciberseguridad. Mi meta es unir la cultura y la historia de mi país gracias a la programación. Poner en boca de todos al Perú en esta época moderna mediante, lo que considero yo, el décimo arte.
+              Actualmente estoy ejerciendo la carrera de Ingeniería de Sistemas de la Universidad Nacional Tecnológica de Lima Sur localizada en Villa el Salvador. Los temas que me interesan son la historia, la antropología, psicología, el desarrollo de videojuegos y me encantaría poder abordar a profundidad los temas de ciberseguridad. Mi meta es unir la cultura y la historia de mi país gracias a la programación y el desarrollo de videojuegos, para colocar al Perú como eje principal del décimo arte.
             </GlowingText>
           </p>
           <button className="w-fit px-8 py-3 bg-green-700 rounded-full hover:bg-green-600 transition-colors">

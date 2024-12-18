@@ -1,9 +1,48 @@
 'use client'
 import Image from "next/image"
-import SkillBar from "@/components/skill-bar"
-import { Camera, Palette, Plane, Map } from 'lucide-react'
+import { motion } from 'framer-motion';
+import ProjectCard from '../../../components/cart';
 import FlipText from "@/components/ui/flip-text";
 import TypingAnimation from "@/components/ui/text-reveal";
+const projects = [
+  {
+    title: "Asistente virtual en consultas de admision",
+    description: "Desarrollo de un chatbot destinado a responder preguntas frecuentes para la direccion de admision de la Universidad Nacional Tecnologica de Lima Sur (UNTELS)",
+    link: "https://github.com/Carloscv200313/pyto_progrmacion_MRUV",
+    imageUrl: "/alumnos/Oscar/proyec_01.jpeg"
+  },
+  {
+    title: "Simulador de un cuerpo en MRU",
+    description: "Proyecto realizado para poder graficar como es el movimiento de un cuerpo en MRU y hallar los calculos necesarios para el desarrollo de algunas variables",
+    link: "https://proyecto2.com",
+    imageUrl: "/alumnos/Oscar/1.png"
+  },
+  {
+    title: "Sistema de ventas para una panizeria",
+    description: "Se hizo un sistema web para poder gesionar las ventas en tiempo real de una panizeria ",
+    link: "https://panizzeria.vercel.app/",
+    imageUrl: "/alumnos/Oscar/2.png"
+  }
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1
+  }
+};
+
 export default function Home() {
 
   return (
@@ -15,7 +54,7 @@ export default function Home() {
           style={{ backgroundImage: "url('/alumnos/Oscar/compu.jpeg')" }}
         >
           {/* Overlay oscuro */}
-          <div className="absolute inset-0 bg-black bg-opacity-90"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-80"></div>
           {/* Contenido sobre la imagen */}
           <div className="flex flex-col justify-center space-y-20 ">
 
@@ -24,15 +63,11 @@ export default function Home() {
               word="OSCAR    MANUEL"
             />
             <FlipText
-              className="text-5xl font-bold -tracking-widest text-blue-800 md:text-9xl md:leading-[5rem]"
+              className="text-5xl font-bold -tracking-widest text-blue-500 md:text-9xl md:leading-[5rem]"
               word="NUÑEZ    BUSTOS"
             />
           </div>
         </section>
-
-
-
-
         {/* About Section */}
         <section
           className={`grid lg:grid-cols-2 gap-12 transition-opacity duration-1000 min:h-[100vh]`}
@@ -43,7 +78,9 @@ export default function Home() {
             <p className="text-muted-foreground">2313010780@untels.edu.pe</p>
             <TypingAnimation
               className="text-xl text-white"
-              text="Soy Oscar Manuel Núñez Bustos, estudiante del cuarto ciclo de la carrera de Ingenieria de Sistemas en la Universidad Nacional Tecnológica de Lima Sur. A pesar de estar aún en una etapa temprana de mi formación, he logrado destacar por mi dedicación y pasión en áreas como machine learning, estadística avanzada, muestreo y análisis de datos. He liderado y participado en proyectos que van desde la creación de modelos predictivos hasta el análisis de grandes volúmenes de datos, generando soluciones innovadoras con impacto tangible. Estos logros no solo reflejan mi compromiso académico, sino también mi visión de cómo la Ciencia de Datos puede transformar realidades, aportar valor a la sociedad y resolver problemas complejos de manera ética y responsable."
+              text="¡Hola! Soy estudiante de Ingeniería de Sistemas, actualmente cursando el cuarto ciclo y construyendo mi camino hacia el fascinante mundo de la ciencia de datos. Mi formación incluye cursos en programación con Python, visualización de datos tanto en Python como en R, y un sólido enfoque en estadística descriptiva e inferencial, abarcando técnicas como regresión lineal y múltiple. También he explorado las bases de datos, el aprendizaje automático (machine learning) y el procesamiento del lenguaje natural (NLP), herramientas que considero esenciales para transformar datos en decisiones y generar impacto.  
+
+Me apasiona el análisis y la resolución de problemas complejos a través de la tecnología, y creo firmemente en el poder de los datos para contar historias, descubrir oportunidades y cambiar el mundo. Mi meta es seguir aprendiendo, colaborando en proyectos desafiantes y creciendo como profesional en este emocionante campo. ¡Siempre estoy listo para convertir desafíos en logros y números en insights que impulsen el futuro!"
             />
             <p className="text-muted-foreground">Lima, Perú</p>
           </div>
@@ -65,97 +102,33 @@ export default function Home() {
 
         {/* Resume Section */}
         <section className={`transition-opacity duration-1000`}>
-          <h2 className="text-4xl font-bold tracking-tighter mb-12">RESUME</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <div className="space-y-8">
-              <section className="space-y-4">
-                <h3 className="text-xl font-semibold">SOFTWARE SKILLS</h3>
-                <div className="space-y-4">
-                  <SkillBar name="Photoshop" progress={90} />
-                  <SkillBar name="Illustrator" progress={85} />
-                  <SkillBar name="InDesign" progress={80} />
-                  <SkillBar name="Premiere" progress={75} />
-                  <SkillBar name="After Effect" progress={70} />
-                </div>
-              </section>
-              <section className="space-y-4">
-                <h3 className="text-xl font-semibold">LANGUAGES</h3>
-                <div className="space-y-4">
-                  <SkillBar name="English" progress={100} />
-                  <SkillBar name="Arabic" progress={80} />
-                  <SkillBar name="Turkish" progress={60} />
-                </div>
-              </section>
-            </div>
-
-            <div className="space-y-8">
-              <section className="space-y-4">
-                <h3 className="text-xl font-semibold">EXPERIENCE</h3>
-                <div className="space-y-6">
-                  <div className="relative pl-8 pb-6 border-l border-muted">
-                    <div className="absolute left-0 top-0 w-2 h-2 rounded-full bg-primary -translate-x-[5px]" />
-                    <h4 className="font-medium">WHITE FISH ADVERTISING CO.</h4>
-                    <p className="text-sm text-muted-foreground">Senior Graphic Designer</p>
-                  </div>
-                  <div className="relative pl-8 pb-6 border-l border-muted">
-                    <div className="absolute left-0 top-0 w-2 h-2 rounded-full bg-primary -translate-x-[5px]" />
-                    <h4 className="font-medium">PYRAMIDS SUN ADVERTISING CO.</h4>
-                    <p className="text-sm text-muted-foreground">Senior Graphic Designer</p>
-                  </div>
-                  <div className="relative pl-8">
-                    <div className="absolute left-0 top-0 w-2 h-2 rounded-full bg-primary -translate-x-[5px]" />
-                    <h4 className="font-medium">PLANET STATIONARY & PRINTING SERVICES CO.</h4>
-                    <p className="text-sm text-muted-foreground">Graphic Designer</p>
-                  </div>
-                </div>
-              </section>
-              <section className="space-y-4">
-                <h3 className="text-xl font-semibold">EDUCATION</h3>
-                <div>
-                  <p className="font-medium">BSc/Ms in Computer Science,</p>
-                  <p className="text-sm text-muted-foreground">University of Maryland</p>
-                </div>
-              </section>
-            </div>
-
-            <div className="space-y-8">
-              <section className="space-y-4">
-                <h3 className="text-xl font-semibold">WHAT CAN I DO ?</h3>
-                <div className="space-y-2">
-                  <p>Logo - Stationary - Branding</p>
-                  <p>Newsletter - Packaging - Catalog</p>
-                  <p>Strategy - Advertisement</p>
-                </div>
-              </section>
-              <section className="space-y-4">
-                <h3 className="text-xl font-semibold">DESIGN SKILLS</h3>
-                <div className="space-y-2">
-                  <p>Creativity - Planing & Strategy</p>
-                  <p>Signs & Typography - Layout</p>
-                  <p>Grid - Color sense - Inspiration</p>
-                </div>
-              </section>
-              <section className="space-y-4">
-                <h3 className="text-xl font-semibold">HOBBIES & INTERESTS</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="flex items-center gap-2">
-                    <Camera className="h-5 w-5" />
-                    <span>Photography</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Palette className="h-5 w-5" />
-                    <span>Drawing</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Map className="h-5 w-5" />
-                    <span>Travel</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Plane className="h-5 w-5" />
-                    <span>Aviation</span>
-                  </div>
-                </div>
-              </section>
+          <div className="min-h-screen bg-transparent text-white py-12 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <motion.h1
+                className="text-4xl font-bold text-center mb-12"
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                Mis Proyectos
+              </motion.h1>
+              <motion.div
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                {projects.map((project, index) => (
+                  <motion.div key={index} variants={itemVariants}>
+                    <ProjectCard
+                      title={project.title}
+                      description={project.description}
+                      link={project.link}
+                      imageUrl={project.imageUrl}
+                    />
+                  </motion.div>
+                ))}
+              </motion.div>
             </div>
           </div>
         </section>
