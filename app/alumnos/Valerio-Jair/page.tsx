@@ -10,7 +10,7 @@ import {
   Link2,
   LucideIcon
 } from 'lucide-react';
-
+import Image from 'next/image';
 // Tipos para la tecnología
 interface Technology {
   name: string;
@@ -131,7 +131,9 @@ const Portfolio: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-10"></div>
         <h2 className="text-3xl font-semibold text-center mb-8 text-white">Sobre Mí</h2>
         <div className="flex items-center space-x-8 relative z-10">
-          <img 
+          <Image
+            width={100}
+            height={100}
             src="/api/placeholder/300/300" 
             alt="Foto de perfil" 
             className="w-64 h-64 rounded-full object-cover border-4 border-cyan-500 shadow-2xl"
