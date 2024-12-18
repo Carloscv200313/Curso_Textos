@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 export function HeroSection() {
   const words = [
     { text: "SOY", size: "text-6xl" },
@@ -28,7 +29,9 @@ export function HeroSection() {
 
         {/* Imagen a la derecha */}
         <div className="w-80 h-80 flex-shrink-0 mt-4">
-          <img
+          <Image
+            height={100}
+            width={100}
             src="/Correa/15.jpg"
             alt="Foto de Piero Correa"
             className="rounded-full object-cover w-full h-full"
@@ -50,7 +53,9 @@ export function HeroSection() {
             rel="noopener noreferrer"
             className="flex flex-col items-center"
           >
-            <img
+            <Image
+              width={100}
+              height={100}
               src="/Correa/fb.png"
               alt="Facebook Logo"
               className="w-8 h-8 rounded-full object-cover shadow-lg"
@@ -65,7 +70,9 @@ export function HeroSection() {
             rel="noopener noreferrer"
             className="flex flex-col items-center"
           >
-            <img
+            <Image
+              width={100}
+              height={100}
               src="/Correa/x.png"
               alt="Twitter Logo"
               className="w-8 h-8 rounded-full object-cover shadow-lg"
@@ -80,7 +87,9 @@ export function HeroSection() {
             rel="noopener noreferrer"
             className="flex flex-col items-center"
           >
-            <img
+            <Image
+              width={100}
+              height={100}
               src="/Correa/ig.png"
               alt="Instagram Logo"
               className="w-8 h-8 rounded-full object-cover shadow-lg"
@@ -95,7 +104,9 @@ export function HeroSection() {
             rel="noopener noreferrer"
             className="flex flex-col items-center"
           >
-            <img
+            <Image
+              width={100}
+              height={100}
               src="/Correa/logo1.png"
               alt="LinkedIn Logo"
               className="w-8 h-8 rounded-full object-cover shadow-lg"
