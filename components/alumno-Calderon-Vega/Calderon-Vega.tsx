@@ -33,7 +33,7 @@ export default function PaginaCarlosCalderon() {
                 <Image
                     width={10000}
                     height={500}
-                    src="/alumnos/carlos_calderon/fondo.jpg"
+                    src="/alumnos/CARBAJAL/fondo.jpg"
                     alt="foto de fondo"
                     className="absolute inset-0 object-cover w-full h-full"
                     style={{ filter: "brightness(0.1)" }} // Oscurece la imagen
@@ -132,7 +132,6 @@ export default function PaginaCarlosCalderon() {
                 </div>
                 <div className="min-h-screen bg-transparent">
                     <ProjectGridComponent/>
-                    
                 </div>
             </div>
         </>

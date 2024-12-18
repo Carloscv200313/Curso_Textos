@@ -14,7 +14,13 @@ const students: Student[] = [
   { name: "Carlos Calderón", description: "Desarrollador full-stack.", image: "/alumnos/carlos_calderon/foto.png", ruta:"/alumnos/Carlos-Calderon" },
   { name: "Oscar Nuñez", description: "Ciencia de Datos", image: "/alumnos/Oscar/perfil.jpeg" , ruta:"/alumnos/Oscar"},
   { name: "Jeshua Avalos", description: "Creador de videojuegos", image: "/alumnos/carlos_calderon/jeshua.jpeg" , ruta:"/alumnos/Avaloz-Mendoza"},
-  { name: "Maicol Leon", description: "Ciberseguridad", image: "/alumnos/Oscar/maicol.png" , ruta:"/alumnos/Leon-Maicol"},
+  { name: "Maicol Leon", description: "Videojuegos", image: "/alumnos/Oscar/maicol.png" , ruta:"/alumnos/Leon-Maicol"},
+  { name: "Miguel Calderon", description: "Programador", image: "/alumnos/Miguel_Calderon/miguel-calderon.jpeg" , ruta:"/alumnos/Calderon-Guevara"},
+  { name: "Carbajal Solano", description: "Analista de Datos", image: "/alumnos/CARBAJAL/foto-CARBAJAL.png" , ruta:"/alumnos/Carbajal-Solano"},
+  { name: "Piero Correa", description: "Videojuegos", image: "/Correa/15.jpg" , ruta:"/alumnos/CorreaPiero"},
+  { name: "Jair Valerio", description: "Desarrollador Web", image: "/alumnos/CARBAJAL/Anonymous-Logo.jpg" , ruta:"/alumnos/Valerio-Jair"},
+  { name: "Jhon Vergara", description: "Dibujo Tecnico", image: "/alumnos/CARBAJAL/Anonymous-Logo.jpg" , ruta:"/alumnos/Vergara-Jhon"},
+
 ];
 
 const container = {
