@@ -36,7 +36,7 @@ export default function PaginaCarlosCalderon() {
                     src="/alumnos/CARBAJAL/fondo.jpg"
                     alt="foto de fondo"
                     className="absolute inset-0 object-cover w-full h-full"
-                    style={{ filter: "brightness(0.1)" }} // Oscurece la imagen
+                    style={{ filter: "brightness(0.3)" }} // Oscurece la imagen
                 />
                 {/* Texto en la parte superior */}
                 <div className="absolute inset-0 flex items-center justify-center text-white z-10 w-full">
